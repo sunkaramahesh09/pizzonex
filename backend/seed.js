@@ -7,18 +7,18 @@ const Pizza = require("./models/Pizza");
 const Ingredient = require("./models/Ingredient");
 
 const pizzas = [
-  { name: "Margherita", description: "Fresh mozzarella, tomato sauce, and basil on a crispy thin crust", price: 299, image: "/images/pizza-bbq-chicken.jpg", category: "Classic" },
-  { name: "BBQ Chicken", description: "Smoky BBQ sauce, grilled chicken, caramelized onions, and cilantro", price: 449, image: "/images/pizza-bbq.png", category: "Premium" },
-  { name: "Veggie Supreme", description: "Loaded with bell peppers, mushrooms, olives, onions, and fresh basil", price: 349, image: "/images/pizza-classic-pepperoni.jpg", category: "Vegetarian" },
-  { name: "Meat Lovers", description: "Pepperoni, sausage, bacon, ham – a carnivore's dream pizza", price: 499, image: "/images/pizza-farmhouse.jpg", category: "Premium" },
-  { name: "Classic Pepperoni", description: "Generous pepperoni with mozzarella and our signature tomato sauce", price: 349, image: "/images/pizza-margherita.png", category: "Classic" },
-  { name: "Garden Fresh", description: "Seasonal vegetables with herb-infused olive oil and feta cheese", price: 329, image: "/images/pizza-meat.png", category: "Vegetarian" },
-  { name: "Pesto Chicken", description: "Creamy pesto base, grilled chicken, sun-dried tomatoes, and parmesan", price: 429, image: "/images/pizza-paneer-tikka.png", category: "Premium" },
-  { name: "Hawaiian", description: "Classic ham and pineapple with mozzarella on a golden crust", price: 379, image: "/images/pizza-pepperoni.jpg", category: "Classic" },
-  { name: "Paneer Tikka", description: "Spiced paneer chunks, onions, peppers, and tangy tikka sauce", price: 399, image: "/images/pizza-pesto-chicken.jpg", category: "Vegetarian" },
-  { name: "Farmhouse", description: "Mushrooms, capsicum, onions, and fresh tomatoes on a wheat crust", price: 319, image: "/images/pizza-veggie-supreme.jpg", category: "Vegetarian" },
-  { name: "Chicken Keema", description: "Spiced minced chicken, jalapeños, and onions with a fiery kick", price: 469, image: "/images/pizza-veggie.png", category: "Premium" },
-  { name: "Four Cheese", description: "Mozzarella, cheddar, parmesan, and gouda on a stuffed crust", price: 449, image: "/images/pizza-pepperoni.jpg", category: "Classic" },
+  { name: "Margherita", description: "Fresh mozzarella, tomato sauce, and basil on a crispy thin crust", price: 299, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773162067/pizzonex/pizza-bbq-chicken.jpg", category: "Classic" },
+  { name: "BBQ Chicken", description: "Smoky BBQ sauce, grilled chicken, caramelized onions, and cilantro", price: 449, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773160090/pizzonex/pizza-bbq.jpg", category: "Premium" },
+  { name: "Veggie Supreme", description: "Loaded with bell peppers, mushrooms, olives, onions, and fresh basil", price: 349, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773162082/pizzonex/pizza-classic-pepperoni.jpg", category: "Vegetarian" },
+  { name: "Meat Lovers", description: "Pepperoni, sausage, bacon, ham – a carnivore's dream pizza", price: 499, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773162093/pizzonex/pizza-farmhouse.jpg", category: "Premium" },
+  { name: "Classic Pepperoni", description: "Generous pepperoni with mozzarella and our signature tomato sauce", price: 349, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773160082/pizzonex/pizza-margherita.jpg", category: "Classic" },
+  { name: "Garden Fresh", description: "Seasonal vegetables with herb-infused olive oil and feta cheese", price: 329, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773160105/pizzonex/pizza-meat.jpg", category: "Vegetarian" },
+  { name: "Pesto Chicken", description: "Creamy pesto base, grilled chicken, sun-dried tomatoes, and parmesan", price: 429, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773162053/pizzonex/pizza-paneer-tikka.png", category: "Premium" },
+  { name: "Hawaiian", description: "Classic ham and pineapple with mozzarella on a golden crust", price: 379, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773160338/pizzonex/pizza-pepperoni.jpg", category: "Classic" },
+  { name: "Paneer Tikka", description: "Spiced paneer chunks, onions, peppers, and tangy tikka sauce", price: 399, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773160435/pizzonex/pizza-pesto-chicken.jpg", category: "Vegetarian" },
+  { name: "Farmhouse", description: "Mushrooms, capsicum, onions, and fresh tomatoes on a wheat crust", price: 319, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773162106/pizzonex/pizza-veggie-supreme.jpg", category: "Vegetarian" },
+  { name: "Chicken Keema", description: "Spiced minced chicken, jalapeños, and onions with a fiery kick", price: 469, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773160100/pizzonex/pizza-veggie.jpg", category: "Premium" },
+  { name: "Four Cheese", description: "Mozzarella, cheddar, parmesan, and gouda on a stuffed crust", price: 449, image: "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773160338/pizzonex/pizza-pepperoni.jpg", category: "Classic" },
 ];
 
 const ingredients = [

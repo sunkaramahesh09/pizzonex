@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { api } from "@/lib/api";
 import PizzaCard from "@/components/PizzaCard";
 import { motion } from "framer-motion";
-import heroPizza from "@/assets/hero-pizza.png";
+const heroPizza = "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773162116/pizzonex/hero-pizza.jpg";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { Paintbrush, Loader2 } from "lucide-react";
