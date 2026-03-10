@@ -61,7 +61,7 @@ export default function Index() {
             <img
               src={heroPizza}
               alt="Delicious pizza"
-              className="w-72 md:w-96 rounded-full shadow-2xl"
+              className="w-72 h-72 md:w-96 md:h-96 rounded-full object-cover shadow-2xl"
             />
           </motion.div>
         </div>
