@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import image1 from "../assets/image2.jpg";
+
+
 
 type Props = {
   selections: Record<string, string[]>;

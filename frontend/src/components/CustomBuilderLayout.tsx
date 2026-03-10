@@ -1,5 +1,4 @@
-import image1 from "../assets/pizza1.png";
-import image2 from "../assets/Frame 1.png";
+const image2 = "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773162067/pizzonex/pizza-bbq-chicken.jpg";
 
 type Props = {
   pizzaPreview: React.ReactNode;
