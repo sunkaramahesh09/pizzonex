@@ -13,7 +13,14 @@ const paymentRoutes = require("./routes/payments");
 const app = express();
 
 // Middleware
-app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:8080", credentials: true }));
+app.use(cors({
+  origin: [
+    process.env.CLIENT_URL || "http://localhost:8080",
+    "https://pizzonex.vercel.app",
+    "https://pizzonex-frontend.vercel.app",
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
@@ -26,7 +33,7 @@ app.use("/api/payments", paymentRoutes);
 // Health check
 app.get("/api/health", (req, res) => res.json({ status: "ok" }));
 
-// Start server
+// Start server (for local dev)
 const PORT = process.env.PORT || 5001;
 
 connectDB().then(() => {
@@ -34,3 +41,6 @@ connectDB().then(() => {
     console.log(`🚀 Server running on port ${PORT}`);
   });
 });
+
+// Export for Vercel serverless
+module.exports = app;
