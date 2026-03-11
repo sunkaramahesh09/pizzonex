@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-
+const CLOUDINARY_BASE =
+  "https://res.cloudinary.com/ddn1qjenm/image/upload/pizzonex/builder";
 
 type Props = {
   selections: Record<string, string[]>;

@@ -1,0 +1,38 @@
+{
+  "bases": {
+    "gluten-free": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241279/pizzonex/builder/bases/gluten-free.png",
+    "stuffed-crust": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241286/pizzonex/builder/bases/stuffed-crust.png",
+    "thick-crust": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241295/pizzonex/builder/bases/thick-crust.png",
+    "thin-crust": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241298/pizzonex/builder/bases/thin-crust.jpg",
+    "whole-wheat": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241307/pizzonex/builder/bases/whole-wheat.png"
+  },
+  "sauces": {
+    "alfredo": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241313/pizzonex/builder/sauces/alfredo.png",
+    "bbq-sauce": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241324/pizzonex/builder/sauces/bbq-sauce.png",
+    "buffalo": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241347/pizzonex/builder/sauces/buffalo.png",
+    "marinara": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241363/pizzonex/builder/sauces/marinara.png",
+    "marinara1": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241385/pizzonex/builder/sauces/marinara1.png",
+    "pesto": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241407/pizzonex/builder/sauces/pesto.png"
+  },
+  "cheese": {
+    "cheddar": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241429/pizzonex/builder/cheese/cheddar.png",
+    "mozzarella": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241450/pizzonex/builder/cheese/mozzarella.png",
+    "parmesan": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241475/pizzonex/builder/cheese/parmesan.png"
+  },
+  "veggies": {
+    "bell-peppers": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241492/pizzonex/builder/veggies/bell-peppers.png",
+    "jalapenos": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241496/pizzonex/builder/veggies/jalapenos.png",
+    "mushrooms": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241500/pizzonex/builder/veggies/mushrooms.png",
+    "olives": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241502/pizzonex/builder/veggies/olives.png",
+    "onions": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241503/pizzonex/builder/veggies/onions.png",
+    "spinach": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241514/pizzonex/builder/veggies/spinach.png",
+    "tomatoes": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241517/pizzonex/builder/veggies/tomatoes.png"
+  },
+  "meat": {
+    "bacon": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241525/pizzonex/builder/meat/bacon.png",
+    "chicken": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241528/pizzonex/builder/meat/chicken.png",
+    "ham": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241532/pizzonex/builder/meat/ham.png",
+    "pepperoni": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241541/pizzonex/builder/meat/pepperoni.png",
+    "sausage": "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773241545/pizzonex/builder/meat/sausage.png"
+  }
+}
