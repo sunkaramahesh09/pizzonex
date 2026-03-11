@@ -1,4 +1,4 @@
-const image2 = "https://res.cloudinary.com/ddn1qjenm/image/upload/v1773162067/pizzonex/pizza-bbq-chicken.jpg";
+const image2 = "https://res.cloudinary.com/ddn1qjenm/image/upload/pizzonex/builder/frame1.png";
 
 type Props = {
   pizzaPreview: React.ReactNode;
