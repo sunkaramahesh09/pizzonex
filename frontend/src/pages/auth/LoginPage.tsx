@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Pizza, Eye, EyeOff } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
+import { api } from "@/lib/api";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -26,19 +27,16 @@ export default function LoginPage() {
     try {
       await login(email, password);
       toast.success("Welcome back!");
-      // Read the token to determine role for redirect
+
       const token = localStorage.getItem("token");
+
       if (token) {
-        const payload = JSON.parse(atob(token.split(".")[1]));
-        // Fetch user to check role
-        const res = await fetch("/api/auth/me", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-        const user = await res.json();
+        const user = await api.getMe();
         navigate(user.role === "admin" ? "/admin" : "/dashboard");
       } else {
         navigate("/dashboard");
       }
+
     } catch (err: any) {
       toast.error(err.message || "Login failed");
     } finally {
