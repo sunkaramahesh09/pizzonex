@@ -34,6 +34,8 @@ export const api = {
   login: (body: { email: string; password: string }) =>
     request("/auth/login", { method: "POST", body: JSON.stringify(body) }),
 
+  loginAsGuest: () => request("/auth/guest", { method: "POST" }),
+
   verifyEmail: (token: string) =>
     request(`/auth/verify-email/${token}`),
 

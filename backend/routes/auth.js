@@ -3,6 +3,7 @@ const auth = require("../middleware/auth");
 const {
   register,
   login,
+  guestLogin,
   verifyEmail,
   forgotPassword,
   resetPassword,
@@ -11,6 +12,7 @@ const {
 
 router.post("/register", register);
 router.post("/login", login);
+router.post("/guest", guestLogin);
 router.get("/verify-email/:token", verifyEmail);
 router.post("/forgot-password", forgotPassword);
 router.post("/reset-password/:token", resetPassword);

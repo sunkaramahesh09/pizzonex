@@ -14,7 +14,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [showPw, setShowPw] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const { login } = useAuth();
+  const { login, loginAsGuest } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -94,6 +94,39 @@ export default function LoginPage() {
             </div>
             <Button type="submit" className="w-full" size="lg" disabled={submitting}>
               {submitting ? "Signing in..." : "Sign In"}
+            </Button>
+
+            <div className="relative my-4">
+              <div className="absolute inset-0 flex items-center">
+                <span className="w-full border-t" />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-background px-2 text-muted-foreground">
+                  Or continue with
+                </span>
+              </div>
+            </div>
+
+            <Button 
+              type="button" 
+              variant="outline" 
+              className="w-full" 
+              size="lg" 
+              disabled={submitting}
+              onClick={async () => {
+                setSubmitting(true);
+                try {
+                  await loginAsGuest();
+                  toast.success("Welcome, Guest!");
+                  navigate("/dashboard");
+                } catch (err: any) {
+                  toast.error(err.message || "Guest login failed");
+                } finally {
+                  setSubmitting(false);
+                }
+              }}
+            >
+              Sign in as Guest
             </Button>
           </form>
           <p className="text-center text-sm text-muted-foreground mt-6">

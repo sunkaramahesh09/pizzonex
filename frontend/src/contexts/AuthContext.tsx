@@ -14,6 +14,7 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
+  loginAsGuest: () => Promise<void>;
   register: (name: string, email: string, password: string) => Promise<void>;
   logout: () => void;
   isAuthenticated: boolean;
@@ -45,6 +46,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setUser(data.user);
   };
 
+  const loginAsGuest = async () => {
+    const data = await api.loginAsGuest();
+    localStorage.setItem("token", data.token);
+    setUser(data.user);
+  };
+
   const register = async (name: string, email: string, password: string) => {
     await api.register({ name, email, password });
     // Don't auto-login — user needs to verify email first
@@ -56,7 +63,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, register, logout, isAuthenticated: !!user }}>
+    <AuthContext.Provider value={{ user, loading, login, loginAsGuest, register, logout, isAuthenticated: !!user }}>
       {children}
     </AuthContext.Provider>
   );

@@ -94,6 +94,40 @@ exports.login = async (req, res) => {
   }
 };
 
+// POST /api/auth/guest
+exports.guestLogin = async (req, res) => {
+  try {
+    const email = "guest@pizzonex.com";
+    let user = await User.findOne({ email });
+
+    if (!user) {
+      const salt = await bcrypt.genSalt(10);
+      const hashedPassword = await bcrypt.hash("Guest@Pizzonex123", salt);
+      user = await User.create({
+        name: "Guest User",
+        email,
+        password: hashedPassword,
+        isVerified: true,
+      });
+    }
+
+    const token = generateToken(user._id);
+
+    res.json({
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
+    });
+  } catch (err) {
+    console.error("Guest login error:", err);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
 // GET /api/auth/verify-email/:token
 exports.verifyEmail = async (req, res) => {
   try {
